@@ -1,0 +1,44 @@
+/*=====================
+  2.7 Pagination Scss start
+==========================*/
+.theme-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    .pagination {
+        gap: 20px;
+        .page-link {
+            background-color: transparent;
+            border: none;
+            color: rgba(var(--content-color), 1);
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .iconsax svg [fill] {
+            fill: rgba(var(--content-color), 1);
+        }
+        .page-item {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.active {
+                background-color: rgba(var(--theme-color), 1);
+                border-radius: 100%;
+                .page-link {
+                    color: rgba(var(--dark-title), 1);
+                }
+            }
+            &:first-child,
+            &:last-child {
+                background-color: rgba(#6e7179, 20%);
+            }
+        }
+    }
+}

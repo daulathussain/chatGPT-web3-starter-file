@@ -1,0 +1,185 @@
+/**=====================
+  4.6 Login Page scss
+==========================**/
+.login-section {
+    background-image: url("../images/login-bg.jpg");
+    background-size: cover;
+    height: 100%;
+    padding-left: calc(40px + (160 - 40) * ((100vw - 991px) / (1920 - 991)));
+    padding-right: calc(40px + (160 - 40) * ((100vw - 991px) / (1920 - 991)));
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 60px;
+    padding-top: 52px;
+    @media (max-width: 991px) {
+        padding-left: calc(15px + (40 - 15) * ((100vw - 320px) / (1920 - 320)));
+        padding-right: calc(15px + (40 - 15) * ((100vw - 320px) / (1920 - 320)));
+        height: auto;
+        padding-bottom: 0;
+        align-items: unset;
+    }
+    .row {
+        width: 100%;
+    }
+    .login-box {
+        background: rgba(58, 237, 177, 0.05);
+        border: 1px solid rgba(var(--title-color), 0.1);
+        backdrop-filter: blur(6px);
+        border-radius: 6px;
+        padding: calc(30px + (50 - 30) * ((100vw - 991px) / (1920 - 991)));
+        height: 100%;
+        min-height: calc(100vh - 150px);
+        @media (max-width: 991px) {
+            height: auto;
+            min-height: unset;
+            padding: 30px 20px;
+            margin-top: calc(60px + (110 - 60) * ((100vw - 320px) / (1920 - 320)));
+            margin-bottom: calc(60px + (110 - 60) * ((100vw - 320px) / (1920 - 320)));
+        }
+        h2 {
+            font-size: calc(26px + (30 - 26) * ((100vw - 991px) / (1920 - 991)));
+            font-weight: 500;
+            color: rgba(var(--white), 1);
+            margin-bottom: calc(15px + (35 - 15) * ((100vw - 991px) / (1920 - 991)));
+            text-align: center;
+            margin-top: calc(-3px + (-6 - -3) * ((100vw - 320px) / (1920 - 320)));
+            @media (max-width: 991px) {
+                font-size: calc(22px + (26 - 22) * ((100vw - 320px) / (1920 - 320)));
+                margin-bottom: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+            }
+            span {
+                color: rgba(var(--theme-color), 1);
+            }
+        }
+        .nav-tabs {
+            border-bottom: 2px solid rgba(var(--theme-color), 0.1);
+            margin-bottom: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+            .nav-link {
+                color: rgba(var(--content-color), 1);
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                font-size: 20px;
+                text-transform: capitalize;
+                font-weight: 500;
+                position: relative;
+                outline: none;
+                &.active {
+                    color: rgba(var(--theme-color), 1);
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        border-bottom: 2px solid rgba(var(--theme-color), 1);
+                        width: 100%;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            .nav-item {
+                width: 50%;
+                text-align: center;
+            }
+        }
+    }
+    .social-btn {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        li {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border: 1px solid rgba(var(--white), 0.8);
+            border-radius: 8px;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                height: calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
+                font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+                color: rgba(var(--white), 1);
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    .btn-absolute {
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+        width: calc(100% - 100px);
+        @media (max-width: 991px) {
+            position: relative;
+            left: unset;
+            bottom: unset;
+            width: 100%;
+        }
+    }
+}
+
+.login-animation {
+    height: 100%;
+    position: relative;
+    @media (max-width: 991px) {
+        height: calc(360px + (500 - 360) * ((100vw - 320px) / (1920 - 320)));
+        transform: scale(0.6);
+        transform-origin: bottom;
+        margin-bottom: 40px;
+    }
+    .img-base {
+        position: absolute;
+        bottom: 0;
+    }
+    .img-light {
+        position: absolute;
+        bottom: calc(60px + (90 - 60) * ((100vw - 991px) / (1920 - 991)));
+        mix-blend-mode: color-dodge;
+        @media (max-width: 991px) {
+            bottom: 60px;
+        }
+    }
+    .img-face {
+        position: absolute;
+        bottom: calc(30px + (80 - 30) * ((100vw - 991px) / (1920 - 991)));
+        left: calc(30px + (90 - 30) * ((100vw - 991px) / (1920 - 991)));
+        [dir="rtl"] & {
+            left: unset;
+            right: calc(30px + (90 - 30) * ((100vw - 991px) / (1920 - 991)));
+        }
+        @media (max-width: 991px) {
+            bottom: 30px;
+            left: 120px;
+            [dir="rtl"] & {
+                left: unset;
+                right: 120px;
+            }
+        }
+        img {
+            animation: flip 3s linear infinite alternate;
+            mix-blend-mode: color-dodge;
+        }
+    }
+}
+
+.logo-auth {
+    position: absolute;
+    top: calc(40px + (60 - 40) * ((100vw - 991px) / (1920 - 991)));
+    left: calc(40px + (160 - 40) * ((100vw - 991px) / (1920 - 991)));
+    z-index: 1;
+    [dir="rtl"] & {
+        left: unset;
+        right: calc(40px + (160 - 40) * ((100vw - 991px) / (1920 - 991)));
+    }
+    @media (max-width: 991px) {
+        top: calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320)));
+        left: calc(15px + (60 - 15) * ((100vw - 320px) / (1920 - 320)));
+        [dir="rtl"] & {
+            left: unset;
+            right: calc(15px + (60 - 15) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+}

@@ -1,0 +1,86 @@
+/*=====================
+    1.1 Reset CSS start
+==========================*/
+@media (min-width: 1430px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+section,
+.section-t-space {
+    padding-top: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.section-b-space {
+    padding-bottom: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.section-mt-space {
+    margin-top: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.section-mb-space {
+    margin-bottom: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.sm-t-space {
+    padding-top: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.sm-b-space {
+    padding-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.text-content {
+    color: rgba(var(--content-color), 1) !important;
+}
+
+.text-title {
+    color: rgba(var(--title-color), 1) !important;
+}
+
+.text-theme-color {
+    color: rgba(var(--theme-color), 1) !important;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.theme-controller {
+    position: fixed;
+    right: -31px;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%) rotate(-90deg);
+    background-color: rgba(var(--theme-color), 1);
+    border-radius: 7px;
+    .iconsax {
+        svg [fill] {
+            fill: rgba(var(--dark-title), 1);
+        }
+    }
+    [dir="rtl"] & {
+        left: -31px;
+        right: unset;
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        padding: 5px 18px;
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        text-transform: uppercase;
+        outline: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}

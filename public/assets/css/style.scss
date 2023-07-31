@@ -1,0 +1,67 @@
+////* Utils Files  *////
+/* 1.0 Variable CSS  */
+
+////* Base Files  *////
+/* 1.1 Reset CSS  */
+/* 1.2 Typography CSS */
+
+////* Components Files  *////
+/* 2.1 Animation CSS  */
+/* 2.2 Breadcrumb CSS */
+/* 2.3 Button CSS  */
+/* 2.4 Chatting CSS  */
+/* 2.5 Custom cursor CSS  */
+/* 2.6 Form CSS  */
+/* 2.7 Pagination CSS */
+/* 2.8 Ratio CSS */
+/* 2.9 Slider CSS */
+/* 2.10 Tabs CSS */
+/* 2.11 Tap to top CSS */
+/* 2.12 Title CSS */
+
+////* Layout Files  *////
+/* 3.1 Footer css */
+/* 3.2 Header CSS */
+/* 3.3 Nav CSS */
+
+////* Pages Files  *////
+/* 4.1 Blog CSS */
+/* 4.2 Chat CSS */
+/* 4.3 Contact CSS */
+/* 4.4 Error CSS */
+/* 4.5 Home CSS */
+/* 4.6 Login CSS*/
+
+// utils scss files
+@import "utils/variables";
+
+// base scss files
+@import "base/reset";
+@import "base/typography";
+
+// components scss files
+@import "components/animation";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/chatting";
+@import "components/custom-cursor";
+@import "components/form";
+@import "components/pagination";
+@import "components/ratio";
+@import "components/slider";
+@import "components/tabs";
+@import "components/tap-top";
+@import "components/title";
+
+// layout scss files
+@import "layout/footer";
+@import "layout/header";
+@import "layout/nav";
+
+// pages
+@import "pages/blog";
+@import "pages/chat";
+@import "pages/contact";
+@import "pages/error";
+@import "pages/home";
+@import "pages/login";

@@ -1,0 +1,35 @@
+/*=====================
+   2.11 tap to top Scss start
+==========================*/
+.tap-to-top-box {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    transition: all 0.5s;
+    [dir="rtl"] & {
+        right: unset;
+        left: 30px;
+    }
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+    }
+    .tap-to-top-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        background-color: rgba(var(--theme-color), 1);
+        transition: all 0.5s ease;
+        border: 1px solid transparent;
+        .iconsax {
+            svg [fill] {
+                fill: rgba(var(--dark-title), 1);
+            }
+        }
+    }
+}

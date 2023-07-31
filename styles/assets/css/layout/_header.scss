@@ -1,0 +1,23 @@
+/**=====================
+   3.2 header scss
+==========================**/
+
+header {
+     padding: calc(15px + (24 - 15) * ((100vw - 320px) / (1920 - 320)))
+          calc(15px + (100 - 15) * ((100vw - 320px) / (1920 - 320))) 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     position: absolute;
+     width: 100%;
+     z-index: 2;
+     transition: all 0.5s ease;
+     &.sticky {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          background-color: #20333d;
+          padding: 15px calc(15px + (100 - 15) * ((100vw - 320px) / (1920 - 320)));
+     }
+}

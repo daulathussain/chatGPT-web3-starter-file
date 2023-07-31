@@ -1,0 +1,11 @@
+/*=====================
+    2.1 Animation Scss start
+==========================*/
+@keyframes flip {
+    from {
+        transform: scaleX(-1);
+    }
+    to {
+        transform: none;
+    }
+}

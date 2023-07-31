@@ -1,0 +1,55 @@
+/*=====================
+    2.2 Breadcrumb Scss start
+==========================*/
+.breadcrumb-section {
+    background-image: url("../images/breadcrumb-bg.png");
+    background-position: bottom;
+    background-size: cover;
+    padding-top: 180px;
+    padding-bottom: 30px;
+    position: relative;
+    @media (max-width: 1400px) {
+        padding-top: 150px;
+    }
+    @media (max-width: 1199px) {
+        padding-top: calc(80px + (110 - 80) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media (max-width: 1199px) {
+        padding-bottom: calc(40px + (60 - 40) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .breadcrumb-content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        h2 {
+            display: flex;
+            align-items: center;
+            color: rgba(var(--theme-color), 1);
+            font-weight: 600;
+            gap: 5px;
+            margin-bottom: 0;
+            img {
+                height: calc(50px + (80 - 50) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+        p {
+            margin-bottom: 0;
+            padding-left: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+            display: flex;
+            gap: 10px;
+            [dir="rtl"] & {
+                padding-left: 0;
+                padding-right: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+    }
+    .breadcrumb-img {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        @media (max-width: 1400px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
