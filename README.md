@@ -5,6 +5,9 @@
 Build your first web3 API start-up, in which you can provide users to upload the NFT to IPFS, and allow them to make API requests to fetch all the IPFS blockchain smart contract data.
 
 Resource
+Final Code: https://www.theblockchaincoders.com/sourceCode/build-chatgpt-web3-clone-dapp
+
+Starter File: https://github.com/daulathussain/chatGPT-web3-starter-file/
 
 
 Get Pro Course "AI Movie APP": https://bit.ly/AI-Movie-App-Course
